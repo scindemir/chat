@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <style>
+    html, body, #app, #main {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0
+    }
+
+    #app {
+      display: flex;
+      justify-content: center;
+    }
+
+    #main {
+      display: flex;
+    }
+
+    .left-side {
+      flex-grow: 1;
+      max-width: 260px;
+      background: #17212B;
+      color: 7F91A4;
+      padding: 14px;
+      box-sizing: border-box;
+    }
+
+    .user-info {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .user-name {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .user-photo, .message-item-photo {
+      margin-right: 8px;
+      background: url(/projects/chat/nophoto.png);
+      background-size: cover;
+      background-color: #232F3D;
+      border-radius: 50%;
+      height: 86px;
+      width: 86px;
+    }
+
+    .user-list-header {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .user-list {
+      padding: 4px 0 0 8px;
+    }
+
+    .right-side {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      padding: 10px;
+      background-color: #17212B;
+      color: #5B6774;
+    }
+
+    .messages-container {
+      background-color: #0E1621;
+      flex-grow: 1;
+      overflow: scroll;
+      color: #ffffff;
+    }
+
+    .input-container {
+
+    }
+  </style>
+
+  <script src="build.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="login" class="hidden">
+      <input type="text" class="login-name-input" data-role="login-name-input" placeholder="Your nickname">
+    </div>
+    <div class="login-field">
+      <button class="login-submit" data-role="login-submit">Enter</button>
+    </div>
+    <div class="login-error" data-role="login-error"></div>
+  </div>
+
+  <div id="main" class="hidden">
+    <div class="left-side">
+      <div class="user-info">
+        <div class="user-photo" data-role="user-photo"></div>
+        <div class="user-name" data-role="user-name"></div>
+      </div>
+
+      <div class="user-list-container">
+        <div class="user-list-header">
+          All users:
+        </div>
+
+        <div class="user-list" data-role="user-list">
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="messages-container" data-role="messages-list"></div>
+      <div class="input-container" data-role="message-sender">
+        <input class="message-input" data-role="message-input" type="text" placeholder="Your message">
+        <button class="send-button" data-role="message-send-button">Send</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+
