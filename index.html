@@ -81,18 +81,16 @@
     }
   </style>
 
-  <script src="build.js"></script>
+
 </head>
 
 <body>
   <div id="app">
-    <div id="login" class="hidden">
+    <div id="login" class="login-field hidden">
       <input type="text" class="login-name-input" data-role="login-name-input" placeholder="Your nickname">
-    </div>
-    <div class="login-field">
       <button class="login-submit" data-role="login-submit">Enter</button>
+      <div class="login-error" data-role="login-error"></div>
     </div>
-    <div class="login-error" data-role="login-error"></div>
   </div>
 
   <div id="main" class="hidden">
@@ -119,6 +117,8 @@
       </div>
     </div>
   </div>
+
+  <script src="build.js"></script>  
 </body>
 
 </html>
