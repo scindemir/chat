@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+html, body, #main {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+}
+
+#login {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 452px;
+  height: 498px;
+  background: #17212B;
+  text-align: center;
+}
+
+.login__pic {
+  position: relative;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login__title {
+  margin-top: 20px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.login__text {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #7F91A4;
+  padding-top: 10px;
+  margin-bottom: 38px;
+}
+
+.login-name-input {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  color: #858F98;
+  background-color: #17212B;
+  width: 298px;
+  height: 32px;
+  align-self: center;
+  border: none;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #465461;
+  }
+
+  .login-name-input:focus {
+    outline: none;
+  }
+
+  .login-submit {
+    width: 132px;
+    height: 43px;
+    color: #ffffff;
+    background: #5188C1;
+    border-radius: 5px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    text-transform: uppercase;
+    align-self: center;
+    outline: none;
+    border: none;
+  }
+
+  .login-error {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #7F91A4;
+    padding-top: 10px;
+  }
+
+#main {
+  display: flex;
+}
+
+.left-side {
+  flex-grow: 1;
+  max-width: 260px;
+  background: #17212B;
+  color: 7F91A4;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.user-info {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.user-photo, .message-item-photo {
+  margin-right: 8px;
+  background: url(/projects/chat/nophoto.png);
+  background-size: cover;
+  background-color: #232F3D;
+  border-radius: 50%;
+  height: 86px;
+  width: 86px;
+}
+
+.user-list-header {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.user-list {
+  padding: 4px 0 0 8px;
+}
+
+.right-side {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #17212B;
+  color: #5B6774;
+}
+
+.messages-container {
+  background-color: #0E1621;
+  flex-grow: 1;
+  overflow: scroll;
+  color: #ffffff;
+}
+
+.input-container {
+
+}
+
+.hidden#main, .hidden#login {
+  display: none;
+}

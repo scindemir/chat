@@ -4,93 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat</title>
-  <style>
-    html, body, #app, #main {
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      margin: 0
-    }
 
-    #app {
-      display: flex;
-      justify-content: center;
-    }
-
-    #main {
-      display: flex;
-    }
-
-    .left-side {
-      flex-grow: 1;
-      max-width: 260px;
-      background: #17212B;
-      color: 7F91A4;
-      padding: 14px;
-      box-sizing: border-box;
-    }
-
-    .user-info {
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    .user-name {
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .user-photo, .message-item-photo {
-      margin-right: 8px;
-      background: url(/projects/chat/nophoto.png);
-      background-size: cover;
-      background-color: #232F3D;
-      border-radius: 50%;
-      height: 86px;
-      width: 86px;
-    }
-
-    .user-list-header {
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    .user-list {
-      padding: 4px 0 0 8px;
-    }
-
-    .right-side {
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      padding: 10px;
-      background-color: #17212B;
-      color: #5B6774;
-    }
-
-    .messages-container {
-      background-color: #0E1621;
-      flex-grow: 1;
-      overflow: scroll;
-      color: #ffffff;
-    }
-
-    .input-container {
-
-    }
-  </style>
-
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div id="app">
+    
     <div id="login" class="login-field hidden">
+      <div class="login__pic">
+      <img class="login__pic-pic" src="./pic/Group.png">
+      <div class="login__title">Autorization</div>
+      <div class="login__text">Please enter your nickname to proceed</div>
+    </div>
       <input type="text" class="login-name-input" data-role="login-name-input" placeholder="Your nickname">
       <button class="login-submit" data-role="login-submit">Enter</button>
       <div class="login-error" data-role="login-error"></div>
     </div>
+
   </div>
 
   <div id="main" class="hidden">
