@@ -25,9 +25,18 @@ html, body, #main {
 
 .login__pic {
   position: relative;
-  top: 28%;
+  top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 86px;
+  height: 86px;
+  background: #232F3D;
+  border-radius: 50%;
+}
+
+.login__pic-pic {
+  position: relative;
+  top: 37%;
 }
 
 .login__title {
@@ -112,15 +121,39 @@ html, body, #main {
   box-sizing: border-box;
 }
 
+.user-list {
+  padding: 4px 0 0 8px;
+}
+
+.user-list-header {
+  margin: 16px 22px 26px 16px;
+
+}
+
+.user-list-header span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin-bottom: 4px;
+  position: relative;
+  background: #6C7982;
+  border-radius: 3px;
+}
+
 .user-info {
   margin-bottom: 10px;
+  margin-left: 4px;
   display: flex;
   align-items: center;
 }
 
 .user-name {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
   font-size: 14px;
-  font-weight: bold;
+  line-height: 16px;
+  color: #5188C1;
 }
 
 .user-photo, .message-item-photo {
@@ -129,18 +162,11 @@ html, body, #main {
   background-size: cover;
   background-color: #232F3D;
   border-radius: 50%;
-  height: 86px;
-  width: 86px;
+  height: 46px;
+  width: 46px;
 }
 
-.user-list-header {
-  text-transform: uppercase;
-  font-weight: bold;
-}
 
-.user-list {
-  padding: 4px 0 0 8px;
-}
 
 .right-side {
   display: flex;
@@ -151,6 +177,40 @@ html, body, #main {
   color: #5B6774;
 }
 
+.messages-header {
+  padding-left: 16px;
+  width: 546px;
+  height: 56px;
+  border: 1px solid #0E1621;
+  border-radius: 3px;
+}
+
+.messages-header-title {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding-top: 13px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5387C1;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E1621;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5387C1;
+}
+
 .messages-container {
   background-color: #0E1621;
   flex-grow: 1;
@@ -159,7 +219,37 @@ html, body, #main {
 }
 
 .input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #0E1621;
+  border-radius: 3px;
+}
 
+.message-input {
+  flex: 1;
+  height: 54px;
+  background: #17212B;
+  border: none;
+  color: #5B6774;
+  padding-left: 16px;
+  outline: none;
+}
+
+.send-button {
+  width: 112px;
+  height: 36px;
+  background: #5387C1;
+  border-radius: 5px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 6px 20px 6px 20px;
+  border: none;
+  outline: none;
 }
 
 .hidden#main, .hidden#login {
